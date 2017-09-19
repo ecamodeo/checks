@@ -15,7 +15,7 @@ class Room(Checks):
     @check("compiles")
     def test_A_and_7(self):
         """Letter A, room 7 yeilds A7"""
-        self.spawn("./room").stdin("A").stdin("7").stdout("\A7\n", "A7\n").exit(0)
+        self.spawn("./room").stdin("A").stdin("7").stdout("A7\n", "A7\n").exit(0)
 
     @check("compiles")
     def test_invalid_letters(self):
