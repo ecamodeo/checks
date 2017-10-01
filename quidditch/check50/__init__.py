@@ -31,8 +31,3 @@ class quidditch(Checks):
     def test_invalid_quaffles2(self):
         """rejects non ints and bools"""
         self.spawn("./quidditch").stdin("1.2").reject().stdin("M").reject()
-
-    @check("compiles")
-    def test_invalid_integers(self):
-        """rejects numbers < 1 or > 20"""
-        self.spawn("./quidditch").stdin("-8").reject().stdin("35").reject().stdin("100").reject()
