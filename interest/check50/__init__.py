@@ -15,9 +15,9 @@ class Interest(Checks):
     @check("compiles")
     def test_100_and_5_percent(self):
         """$100.00 and 5"%" yeilds $105.00"""
-        self.spawn("./interest").stdin("100").stdin("0.5").stdout("105.00\n", "105.00\n").exit(0)
+        self.spawn("./interest").stdin("100").stdin("0.5").stdout("Updated balance: 105.00\n", "Updated balance: 105.00\n").exit(0)
 
     @check("compiles")
     def test_213_and_7_percent(self):
         """$213.00 and 7"%" yeilds $227.91"""
-        self.spawn("./interest").stdin("213").stdin("0.7").stdout("227.91\n", "227.91\n").exit(0)
+        self.spawn("./interest").stdin("213").stdin("0.7").stdout("Updated balance: 227.91\n", "Updated balance: 227.91\n").exit(0)
