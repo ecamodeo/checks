@@ -24,10 +24,10 @@ class quidditch(Checks):
 
     @check("compiles")
     def test_invalid_quaffles(self):
-        """rejects non ints and bools"""
+        """rejects non ints"""
         self.spawn("./quidditch").stdin("L").reject().stdin("3").reject()
 
     @check("compiles")
     def test_invalid_quaffles2(self):
-        """rejects non ints and bools"""
+        """rejects non bools"""
         self.spawn("./quidditch").stdin("1.2").reject().stdin("M").reject()
