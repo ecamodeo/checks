@@ -14,5 +14,5 @@ class Bubble(Checks):
 
     @check("compiles")
     def test_bubble_sort(self):
-        """Sorts as 4 15 16 50 8 23 42 108"""
-        self.spawn("./bubble").stdout("4 15 16 50 8 23 42 108\n", "4 15 16 50 8 23 42 108\n").stdout("4 8 15 16 23 42 50 108\n", "4 8 15 16 23 42 50 108\n").exit(0)
+        """Sorts as 4 8 15 16 23 42 50 108"""
+        self.spawn("./bubble").stdout("4 15 16 50 8 23 42 108\n4 8 15 16 23 42 50 108\n", "4 15 16 50 8 23 42 108\n4 8 15 16 23 42 50 108\n").exit(0)
