@@ -16,13 +16,4 @@ class Bubble(Checks):
     @check("compiles")
     def test_bubble_sort(self):
         """Sorts as 4 8 15 16 23 42 50 108"""
-        out = self.spawn("./bubble").stdout()
-        correct = File("bubble.txt").read()
-        check_bubble(out, correct)
-
-def check_bubble(output, correct):
-if output == correct:
-    return
-
-output = output.split("\n")
-correct = correct.split("\n")
+        out = self.spawn("./bubble").stdout(File("bubble.txt")).exit(0)
