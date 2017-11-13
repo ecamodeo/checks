@@ -13,6 +13,16 @@ class kids(Checks):
         self.spawn("clang -o kids kids.c -lcs50 -lm").exit(0)
 
     @check("compiles")
-    def five_quaffle_through_hoop_snitch(self):
-        """5 Quaffles through the other team's hoops, got the snitch"""
+    def test_one(self):
+        """1 kid is incorrect"""
         self.spawn("./kids").stdin("1").stdout("That is incorrect!\n", "That is incorrect!\n").exit(0)
+
+    @check("compiles")
+    def test_two(self):
+        """2 kids is correct"""
+        self.spawn("./kids").stdin("2").stdout("That is correct!\n", "That is correct!\n").exit(0)
+
+    @check("compiles")
+    def test_non_ints(self):
+        """Check for non-ints"""
+        self.spawn("./kids").stdin("A").reject().stdin("-2").reject().stdin("1.2").reject()
