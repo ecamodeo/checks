@@ -15,6 +15,4 @@ class kids(Checks):
     @check("compiles")
     def test_1(self):
         """Input of 1 outputs That is correct!""""
-        self.spawn("./kids").stdin("1").stdout("That is incorrect!\n", "That is incorrect!\n").exit(0)
-
-    
+        self.spawn("./kids").stdin("1").stdout("That is incorrect\n", "That is incorrect\n").exit(0)
