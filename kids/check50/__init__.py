@@ -15,4 +15,4 @@ class kids(Checks):
     @check("compiles")
     def five_quaffle_through_hoop_snitch(self):
         """5 Quaffles through the other team's hoops, got the snitch"""
-        self.spawn("./kids").stdin("5").stdout("200\n", "200\n").exit(0)
+        self.spawn("./kids").stdin("1").stdout("That is incorrect!\n", "That is incorrect!\n").exit(0)
