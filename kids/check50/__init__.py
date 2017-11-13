@@ -13,6 +13,6 @@ class kids(Checks):
         self.spawn("clang -o kids kids.c -lcs50 -lm").exit(0)
 
     @check("compiles")
-    def test_1(self):
-        """Input of 1 outputs That is correct!""""
-        self.spawn("./kids").stdin("1").stdout("That is incorrect\n", "That is incorrect\n").exit(0)
+    def five_quaffle_through_hoop_snitch(self):
+        """5 Quaffles through the other team's hoops, got the snitch"""
+        self.spawn("./kids").stdin("5").stdout("200\n", "200\n").exit(0)
