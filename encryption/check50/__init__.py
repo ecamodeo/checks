@@ -20,6 +20,4 @@ class encryption(Checks):
     @check("compiles")
     def test_seven(self):
         """Entering 13 and 201 fails"""
-        self.spawn("./encryption").stdin("13").stdin("201").stdout("Factors failed. Please try again later\n", "Factors failed. Please try again later\n").exit(0)
-
- 
+        self.spawn("./encryption").stdin("13").stdin("201").stdout("Factors failed. Please try again later\n", "Factors failed. Please try again later\n").exit(1)
