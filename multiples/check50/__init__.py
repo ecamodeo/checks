@@ -25,7 +25,7 @@ class multiples(Checks):
     @check("compiles")
     def test_100(self):
         """100 yeilds 100"""
-        self.spawn("./multiples").stdin("100").stdout("100 \n", "100 \n").exit(0)
+        self.spawn("./multiples").stdin("100").stdout("100  \n", "100  \n").exit(0)
 
     @check("compiles")
     def test_invalid_numbers(self):
