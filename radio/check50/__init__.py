@@ -25,9 +25,9 @@ class radio(Checks):
     @check("compiles")
     def test_month(self):
         """Entering invalid month"""
-        self.spawn("./radio").stdin("154").reject()
+        self.spawn("./radio").stdin("154").reject().stdin("-2")
 
     @check("compiles")
     def test_day(self):
         """Entering invalid day"""
-        self.spawn("./radio").stdin("9").stdin("44").reject()
+        self.spawn("./radio").stdin("9").stdin("44").reject().stdin("-3")
