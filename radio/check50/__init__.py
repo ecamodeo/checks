@@ -20,7 +20,7 @@ class radio(Checks):
     @check("compiles")
     def test_my_birthday(self):
         """Entering November 2, 1976 returns 11/2/76"""
-        self.spawn("./radio").stdin("154").stdin("209").stdout("11/2/1976\n", "11/2/1976\n").exit(0)
+        self.spawn("./radio").stdin("11").stdin("2").stdin("1976").stdout("11/2/1976\n", "11/2/1976\n").exit(0)
 
     @check("compiles")
     def test_month(self):
