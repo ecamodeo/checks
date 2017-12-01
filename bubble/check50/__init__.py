@@ -16,4 +16,5 @@ class Bubble(Checks):
     @check("compiles")
     def test_bubble_sort(self):
         """Sorts as 4 8 15 16 23 42 50 108"""
-        out = self.spawn("./bubble").stdout(File("bubble.txt")).exit(0)
+        #out = self.spawn("./bubble").stdout(File("bubble.txt")).exit(0)
+        self.spawn("./bubble").stdout(File("bubble.txt")).exit(0)
