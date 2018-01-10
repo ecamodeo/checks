@@ -15,11 +15,6 @@ class conditionals(Checks):
     @check("compiles")
     def value_of_17(self):
         """Grades of 93, 88, and 77 result in Second Honors and average of 86.0"""
-        self.spawn("./conditionals").stdin("17").stdout("Average: 86.0\nSecond Honors\n", "Average: 86.0\nSecond Honors\n").exit(0)
-
-    @check("compiles")
-    def value_of_17(self):
-        """Grades of 93, 88, and 77 result in Second Honors and average of 86.0"""
         self.spawn("./conditionals").stdin("17").stdout("Second Honors\n", "Second Honors\n").exit(0)
 
     @check("compiles")
