@@ -1,0 +1,35 @@
+<h1>Functions</h1>
+<h2>Problem</h2>
+<p>The user is solving some basic addition problems, and wants to make sure he got the correct result. The below problem prompts the user for the three ints: the two he is adding, followed by the result he got. Write a function <code>verify</code> of type <code>bool</code>, that takes in these three ints and returns either true or false, depending on whether or not he solved the problem correctly.</p>
+
+<h2>Distribution Code</h2>
+<pre>#include <cs50.h>
+#include <stdio.h>
+
+// TODO: add verifier prototype
+
+int main(void)
+{
+    // input from user
+    printf("Enter the first int you are adding: ");
+    int x = get_int();
+    printf("Enter the second int you are adding: ");
+    int y = get_int();
+    printf("Enter the result: ");
+    int z = get_int();
+
+    // TODO: verify the result using the function you wrote, and print 'correct!' or 'incorrect!'
+
+}
+
+// TODO: write the verifier function
+</pre>
+
+<h2>Example</h2>
+<pre>jharvard@run.cs50.net (~): ./functions<br> Enter the first int you are adding: 5<br> Enter the second int you are adding: 123<br>Enter the result: 128<br>correct!<br>
+</pre>
+<h2>Check</h2>
+<p>Name your file functions.c</p>
+<p>check50 functions@ecamodeo/checks</p>
+<p>submit50 functions@ecamodeo/checks</p>
+<p>&nbsp;</p>
