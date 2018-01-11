@@ -15,8 +15,9 @@ class arrays(Checks):
     @check("compiles")
     def test_arrays(self):
         """Values of 4, 13, 18, 22, 0, 1, -4, 19, 100, 11 produces 6"""
-        self.spawn("./arrays").stdin("4").stdin("13").stdin("18").stdin("22").stdin("0").stdin("1").stdin("-4").stdin("19").stdin("100").stdin("11").stdout("Greater than 10: 6\n", "Greater than 10: 6\n").exit(0)
-
+        self.spawn("./arrays").stdin("4").stdin("13").stdin("18")..stdin("22").stdin("0").stdin("1").stdin("-4").stdin("19").stdin("100").stdin("11")
+        .stdout("Greater than 10: 6\n", "Greater than 10: 6\n").exit(0)
+        
     @check("compiles")
     def test_more_values(self):
         """Values of 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 produces 0"""
